@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<base:CustomContentPage x:Class="ToolbarIconsIssue.Views.Dashboard.TileOnePage"
+                        xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                        xmlns:base="clr-namespace:ToolbarIconsIssue.Views.Base"
+                        xmlns:constants="clr-namespace:ToolbarIconsIssue.Constants"
+                        Title="TileOnePage">
+
+    <base:CustomContentPage.ToolbarItems>
+        <ToolbarItem IsEnabled="False"
+                     Priority="1"
+                     Text="Delete">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource FontFamily="{x:Static constants:MaterialIcons.FontName}"
+                                 Glyph="{x:Static constants:MaterialIcons.Delete}"
+                                 Size="40"
+                                 Color="Black" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+
+        <ToolbarItem Priority="2" Text="Edit">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource FontFamily="{x:Static constants:MaterialIcons.FontName}"
+                                 Glyph="{x:Static constants:MaterialIcons.Edit}"
+                                 Size="40"
+                                 Color="Black" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+
+        <ToolbarItem IsEnabled="False"
+                     Priority="3"
+                     Text="Validate">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource FontFamily="{x:Static constants:MaterialIcons.FontName}"
+                                 Glyph="{x:Static constants:MaterialIcons.Check}"
+                                 Size="40"
+                                 Color="Black" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </base:CustomContentPage.ToolbarItems>
+
+    <Grid Margin="25"
+          RowDefinitions="Auto,*"
+          RowSpacing="25">
+
+        <VerticalStackLayout Spacing="25">
+
+            <Label HorizontalOptions="Center"
+                   Text="Welcome to .NET MAUI!"
+                   VerticalOptions="Center" />
+
+            <Button x:Name="TileTwoBtn"
+                    Clicked="TileTwoBtn_Clicked"
+                    Text="Go to Tile Two" />
+
+            <Button x:Name="BackBtn"
+                    Clicked="BackBtn_Clicked"
+                    Text="Go back" />
+
+        </VerticalStackLayout>
+
+        <CollectionView x:Name="FakeListCv" Grid.Row="1" />
+
+    </Grid>
+
+
+</base:CustomContentPage>

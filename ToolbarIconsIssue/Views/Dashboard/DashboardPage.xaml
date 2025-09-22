@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<base:CustomContentPage x:Class="ToolbarIconsIssue.Views.Dashboard.DashboardPage"
+                        xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                        xmlns:base="clr-namespace:ToolbarIconsIssue.Views.Base"
+                        xmlns:constants="clr-namespace:ToolbarIconsIssue.Constants"
+                        Title="DashboardPage">
+
+    <base:CustomContentPage.ToolbarItems>
+        <ToolbarItem Priority="1" Text="Person">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource FontFamily="{x:Static constants:MaterialIcons.FontName}"
+                                 Glyph="{x:Static constants:MaterialIcons.Person}"
+                                 Size="40"
+                                 Color="Black" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+
+        <ToolbarItem Priority="2" Text="Refresh">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource FontFamily="{x:Static constants:MaterialIcons.FontName}"
+                                 Glyph="{x:Static constants:MaterialIcons.Refresh}"
+                                 Size="40"
+                                 Color="Black" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+
+    </base:CustomContentPage.ToolbarItems>
+
+    <VerticalStackLayout Margin="25" Spacing="25">
+
+        <Label HorizontalOptions="Center"
+               Text="Welcome to .NET MAUI!"
+               VerticalOptions="Center" />
+
+        <Button x:Name="TileOneBtn"
+                Clicked="TileOneBtn_Clicked"
+                Text="Go to Tile One" />
+
+        <Button x:Name="BackBtn"
+                Clicked="BackBtn_Clicked"
+                Text="Go back" />
+
+    </VerticalStackLayout>
+</base:CustomContentPage>

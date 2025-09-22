@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<base:CustomContentPage x:Class="ToolbarIconsIssue.Views.Dashboard.TileOne.TileTwoPage"
+                        xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                        xmlns:base="clr-namespace:ToolbarIconsIssue.Views.Base"
+                        xmlns:constants="clr-namespace:ToolbarIconsIssue.Constants"
+                        Title="TileTwoPage">
+
+    <base:CustomContentPage.ToolbarItems>
+        <ToolbarItem Priority="1" Text="Cancel">
+            <!--if keeping text only, the previous icons may persist -->
+            <ToolbarItem.IconImageSource>
+                <FontImageSource FontFamily="{x:Static constants:MaterialIcons.FontName}"
+                                 Glyph="{x:Static constants:MaterialIcons.Close}"
+                                 Size="40"
+                                 Color="Black" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+
+        <ToolbarItem Priority="2"
+                     Text="Validate">
+            <!--if keeping text only, the previous icons may persist -->
+            <ToolbarItem.IconImageSource>
+                <FontImageSource FontFamily="{x:Static constants:MaterialIcons.FontName}"
+                                 Glyph="{x:Static constants:MaterialIcons.Check}"
+                                 Size="40"
+                                 Color="Black" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </base:CustomContentPage.ToolbarItems>
+
+    <ScrollView>
+
+        <VerticalStackLayout Margin="25" Spacing="25">
+
+            <Label HorizontalOptions="Center"
+                   Text="Welcome to .NET MAUI!"
+                   VerticalOptions="Center" />
+
+            <Button IsEnabled="False" Text="Nothing else" />
+
+            <Button x:Name="BackBtn"
+                    Clicked="BackBtn_Clicked"
+                    Text="Go back" />
+
+            <VerticalStackLayout Spacing="15">
+                <Label HorizontalTextAlignment="Center" Text="Fake form" />
+                <Label Text="Entry x" />
+                <Entry />
+                <Label Text="Entry x" />
+                <Entry />
+                <Label Text="Entry x" />
+                <Entry />
+                <Label Text="Entry x" />
+                <Entry />
+                <Label Text="Entry x" />
+                <Entry />
+                <Label Text="Entry x" />
+                <Entry />
+                <Label Text="Entry x" />
+                <Entry />
+                <Label Text="Entry x" />
+                <Entry />
+                <Label Text="Entry x" />
+                <Entry />
+                <Label Text="Entry x" />
+                <Entry />
+                <Label Text="Entry x" />
+                <Entry />
+                <Label Text="Entry x" />
+                <Entry />
+                <Label Text="Entry x" />
+                <Entry />
+                <Label Text="Entry x" />
+                <Entry />
+                <Label Text="Entry x" />
+                <Entry />
+                <Label Text="Entry x" />
+                <Entry />
+                <Label Text="Entry x" />
+                <Entry />
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</base:CustomContentPage>
